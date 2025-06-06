@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos trabalhistas</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <script src="func.js"></script>
+</head>
+<body>
+        <div id="container">
+            <h1>Calculadora de salários</h1>
+            <div id="caixa">
+                <p>Valor da hora: 
+                    <input type="number" id="valorHora" min="0" step="0.1" class="numero">
+                </p>
+
+                <p>Quantidade de hora-trabalhada: 
+                    <input type="number" id="qtdhora" min="0" step="0.1" class="numero">
+                </p>
+                <label>Desconto Vale-transporte:
+                    <select name="desconto" id="descontoVale">
+                        <option value="">Selecione</option>
+                        <option value="S">Sim</option>
+                        <option value="N">Não</option>
+                    </select>
+                </label> 
+
+                <p>Outras deduções: 
+                    <input type="number" min="0" step="0.1" id="deducoes" class="numero">
+                </p>
+            </div>
+                
+            <button onclick="calcula_salario()">Calcular sálario</button>
+            <div id="resultado" style="margin-top: 20px; display: none;">
+                <h3>Resultado:</h3>
+                <p>Salário Bruto: R$ <span id="salarioBruto"></span></p>
+                <p>Desconto inss: R$ <span id="inss"></span></p>
+                <p>Desconto irpf: R$ <span id="irpf"></span></p>
+                <p>Redução Vale-Transporte: R$ <span id="deducaoValeTrans"></span></p>
+                <p>Outras Deduções: R$ <span id="deducoesResult"></span></p>
+                <p><strong>Salário Líquido: R$ <span id="salarioLiquido"></span></strong></p>
+            </div>
+        </div>
+</body>
+</html>
